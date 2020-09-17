@@ -13,9 +13,15 @@
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  padding: 20px 0;
+  padding: 20px 100px;
   -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
           box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  width: 100%;
+  background: white;
 }
 
 #navigation .logo {
@@ -30,6 +36,22 @@
   color: #6eb3ff;
 }
 
+#navigation .link {
+  text-decoration: none;
+  padding: 30px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin: px;
+}
+
+#navigation .link:hover {
+  color: #6eb3ff;
+}
+
+#navigation .social {
+  text-align: left;
+}
+
 #navigation .social img {
   -webkit-filter: invert(98%) sepia(2%) saturate(43%) hue-rotate(356deg) brightness(109%) contrast(87%);
           filter: invert(98%) sepia(2%) saturate(43%) hue-rotate(356deg) brightness(109%) contrast(87%);
@@ -40,5 +62,11 @@
 #navigation .social img:hover {
   -webkit-filter: invert(71%) sepia(74%) saturate(284%) hue-rotate(127deg) brightness(103%) contrast(95%);
           filter: invert(71%) sepia(74%) saturate(284%) hue-rotate(127deg) brightness(103%) contrast(95%);
+}
+
+#banner {
+  width: 100%;
+  height: 100vh;
+  background: #eee;
 }
 /*# sourceMappingURL=style.css.map */
