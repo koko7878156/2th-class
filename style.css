@@ -37,14 +37,18 @@
 }
 
 #navigation .link {
-  text-decoration: none;
-  padding: 30px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  margin: px;
+  text-align: center;
 }
 
-#navigation .link:hover {
+#navigation .link a {
+  text-decoration: none;
+  padding: 30px 30px 30px 40px;
+  -webkit-transform: 0.3s;
+          transform: 0.3s;
+  letter-spacing: 10px;
+}
+
+#navigation .link a:hover {
   color: #6eb3ff;
 }
 
@@ -57,6 +61,8 @@
           filter: invert(98%) sepia(2%) saturate(43%) hue-rotate(356deg) brightness(109%) contrast(87%);
   -webkit-transition: 0.6s;
   transition: 0.6s;
+  width: 32px;
+  margin-left: 30px;
 }
 
 #navigation .social img:hover {
@@ -94,7 +100,7 @@ p {
   padding: 50px;
 }
 
-button-box {
+.button-box {
   padding: 10px 60px;
   border: 2px solid #252525;
   text-decoration: none;
@@ -102,7 +108,7 @@ button-box {
   transition: 0.3s;
 }
 
-button-box:hover {
+.button-box:hover {
   background: #252525;
   color: white;
 }

@@ -41,14 +41,20 @@ $font-family-main : 'Noto Sans TC', sans-serif;
     }
 
     .link  {
-        text-decoration: none;
-        padding: 30px;
-        transition: 0.3s;
-                margin: px;
+        text-align: center;
 
-        &:hover {
-            color: $color-sub;
+        a {
+            text-decoration: none;
+            padding: 30px 30px 30px 40px;
+            transform: 0.3s;
+            letter-spacing: 10px;
+
+            &:hover {
+                color: $color-sub;
+            }
+
         }
+        
     }
 
     .social {
@@ -57,6 +63,8 @@ $font-family-main : 'Noto Sans TC', sans-serif;
         img {
             filter: invert(98%) sepia(2%) saturate(43%) hue-rotate(356deg) brightness(109%) contrast(87%);
             transition: 0.6s;
+            width: 32px;
+            margin-left: 30px;
 
             &:hover {
                 filter: invert(71%) sepia(74%) saturate(284%) hue-rotate(127deg) brightness(103%) contrast(95%);
@@ -99,7 +107,7 @@ p   {
     padding: 50px;
 }
 
-button-box {
+.button-box {
     padding: 10px 60px;
     border: 2px solid $color-main;
     text-decoration: none;
