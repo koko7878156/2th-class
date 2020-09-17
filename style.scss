@@ -1,6 +1,8 @@
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;700;900&display=swap');
-</style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+
+// 主色&次要色
+$color-main: #252525;
+$color-sub: #6eb3ff;
 
 * {
     margin: 0;
@@ -16,6 +18,17 @@
     grid-template-columns: 1fr 1fr 1fr;
     padding: 20px 0;
     box-shadow: 0 5px 5px rgb(0,0,0,0.1);
+
+    .logo {
+        font-family: 'Noto Sans TC', sans-serif;
+        font-size: 32px;
+        text-decoration: none;
+        transition: 0.3s;
+        
+        &:hover {
+            color:$color-sub;
+        }
+    }
 
     .social {
 
