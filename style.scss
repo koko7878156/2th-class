@@ -24,18 +24,20 @@ $font-family-main : 'Noto Sans TC', sans-serif;
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 20px 100px;
+    padding: 20px 120px;
     box-shadow: 0 5px 5px rgba(0,0,0,0.1);
     align-items: center;
     position: fixed;
     width: 100%;
     background: white;
+   
 
     .logo {
         font-family: 'Noto Sans TC', sans-serif;
         font-size: 32px;
         text-decoration: none;
         transition: 0.3s;
+        letter-spacing: 2px;
         
         &:hover {
             color:$color-sub;
@@ -44,7 +46,7 @@ $font-family-main : 'Noto Sans TC', sans-serif;
 
     .link  {
         text-align: center;
-        
+
         a {
             text-decoration: none;
             padding: 30px 30px 30px 40px;
@@ -57,12 +59,12 @@ $font-family-main : 'Noto Sans TC', sans-serif;
         }
     }
 
-    .social {
-        
-        text-align: left;
+    .social {        
+        text-align: right;
+
         img {
             filter: invert(98%) sepia(2%) saturate(43%) hue-rotate(356deg) brightness(109%) contrast(87%);
-            transition: 0.6s;
+            transition: 0.2s;
             width: 32px;
             margin-left: 30px;
 
