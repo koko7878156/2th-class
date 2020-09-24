@@ -3,6 +3,8 @@
 // 主色&次要色
 $color-main: #252525;
 $color-sub: #6eb3ff;
+$color-bg-gray: #f9f9f9;
+$color-white: #ffffff ;
 
 // 文字大小
 $font-size: 36px;
@@ -29,8 +31,6 @@ $font-family-main : 'Noto Sans TC', sans-serif;
     width: 100%;
     background: white;
 
-
-
     .logo {
         font-family: 'Noto Sans TC', sans-serif;
         font-size: 32px;
@@ -44,7 +44,7 @@ $font-family-main : 'Noto Sans TC', sans-serif;
 
     .link  {
         text-align: center;
-
+        
         a {
             text-decoration: none;
             padding: 30px 30px 30px 40px;
@@ -54,9 +54,7 @@ $font-family-main : 'Noto Sans TC', sans-serif;
             &:hover {
                 color: $color-sub;
             }
-
         }
-        
     }
 
     .social {
@@ -70,9 +68,7 @@ $font-family-main : 'Noto Sans TC', sans-serif;
 
             &:hover {
                 filter: invert(71%) sepia(74%) saturate(284%) hue-rotate(127deg) brightness(103%) contrast(95%);
-            }
-
-            
+            }           
         }
     }
 }
@@ -89,26 +85,30 @@ $font-family-main : 'Noto Sans TC', sans-serif;
     width: 100%;
     height: 100vh;
     text-align:center;
+    
+    h2 {
+        font-size: 200px;
+        font-family: $font-family-main;
+        letter-spacing: 30px;
+        padding-left: 30px;
+        margin-top: 50px;
     }
-
-h2 {
-    font-size: 420px;
-    font-family: $font-family-main;
-    letter-spacing: 30px;
-    padding-left: 30px;
-    margin-top: 50px;
+    
+    p   {
+        padding: 30px;
+        margin-bottom: 50px;
+    }
 }
 
-p   {
-    padding: 30px;
-    margin-bottom: 50px;
-}
-
+// 標題
 .title  {
     font-size: $font-family-main;
     padding: 50px;
+    text-align: center;
+    font-size: 50px;
 }
 
+// 按鈕:盒型
 .button-box {
     padding: 10px 60px;
     border: 2px solid $color-main;
@@ -118,5 +118,64 @@ p   {
     &:hover {
         background: $color-main;
         color: white;
+    }
+}
+
+// 作品集
+#works {
+    height: 100vh;
+    background: $color-bg-gray;
+
+    #work-box {
+        width: 1200px;
+        display: grid;
+        margin: 0 auto;
+        // repeat (數量, 一格寬度)
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 350px);
+        grid-gap: 10px 30px;
+        
+        .work-box-small {
+            
+            img {
+                display: block;
+                width: 100%;
+                height: 300px;
+                background: #000;
+                
+            }
+
+            h2 {
+                text-align: center;
+                transform: translateY(-30px);
+            }
+
+            span {
+                display: inline-block;
+                border: 1.5px solid #000;
+                border-radius: 30px;
+                padding: 3px 12px;
+                margin-top: 8px;
+                font-size: 10px;
+            }
+        }
+    }
+}
+// 作品集-按鈕
+.button-div {
+    text-align: center;
+    margin-top: 50px;
+}
+
+// 頁尾
+footer {
+    background:$color-main;
+    text-align: center;
+    margin-top: 100px;
+    
+    a {
+        text-decoration: none;
+        font-size: 30px;
+
     }
 }
