@@ -1,16 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap");
 
 // 主色&次要色
 $color-main: #252525;
 $color-sub: #6eb3ff;
 $color-bg-gray: #f9f9f9;
-$color-white: #ffffff ;
+$color-white: #ffffff;
 
 // 文字大小
 $font-size: 36px;
 
 // 文字字體
-$font-family-main : 'Noto Sans TC', sans-serif;
+$font-family-main: "Noto Sans TC", sans-serif;
+
+// 大小 
+$desktop: 1025px;
+$table: 1024px;
+$phone: 767px;
+
 
 * {
     margin: 0;
@@ -20,58 +26,95 @@ $font-family-main : 'Noto Sans TC', sans-serif;
 }
 
 // 導覽列
-#navigation {   
-
+#navigation {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 20px 120px;
-    box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
     align-items: center;
     position: fixed;
     width: 100%;
     background: white;
-   
 
-    .logo {
-        font-family: 'Noto Sans TC', sans-serif;
-        font-size: 32px;
+    @media screen and (min-width: $desktop) {
+        grid-template: "logo link social";
+    }
+    @media screen and (max-width: $table) {
+        grid-template: "logo social menu";
+    }
+
+    #menu {
+        grid-area: menu;
+
+        // 隱藏
+        @media screen and (min-width: $desktop) {
+            display: none;            
+        }
+        // 顯示
+        @media screen and (max-width: $table) {
+            display: block;
+            margin-left: auto;
+        }
+    }
+}
+.logo {
+    grid-area: logo;
+    
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 40px;
+    text-decoration: none;
+    transition: 0.3s;   
+    letter-spacing: 2px;
+
+    &:hover {
+        color: $color-sub;
+    }
+}
+
+.link {
+    text-align: center;
+    grid-area: link;
+    
+
+    a {
         text-decoration: none;
-        transition: 0.3s;
-        letter-spacing: 2px;
+        padding: 30px 30px 30px 40px;
+        transform: 0.3s;
+        letter-spacing: 10px;
+        font-size: 20px;
+
+        &:hover {
+            color: $color-sub;
+        }
+    }
+
+    @media screen and (max-width: $table) {
+        display: none;
+    }
+}
+
+.social {
+    
+    // grid-area: social;
+
+    text-align: right;
+    grid-area: social;
+
+    img {
+        filter: invert(98%) sepia(2%) saturate(43%) hue-rotate(356deg) brightness(109%) contrast(87%);
+        transition: 0.4s;
+        width: 32px;
+        margin-left: 30px;
+
         
         &:hover {
-            color:$color-sub;
+            filter: invert(71%) sepia(74%) saturate(284%) hue-rotate(127deg) brightness(103%) contrast(95%);
+            width: 40px;
         }
     }
-
-    .link  {
-        text-align: center;
-
-        a {
-            text-decoration: none;
-            padding: 30px 30px 30px 40px;
-            transform: 0.3s;
-            letter-spacing: 10px;
-
-            &:hover {
-                color: $color-sub;
-            }
-        }
-    }
-
-    .social {        
-        text-align: right;
-
-        img {
-            filter: invert(98%) sepia(2%) saturate(43%) hue-rotate(356deg) brightness(109%) contrast(87%);
-            transition: 0.2s;
-            width: 32px;
-            margin-left: 30px;
-
-            &:hover {
-                filter: invert(71%) sepia(74%) saturate(284%) hue-rotate(127deg) brightness(103%) contrast(95%);
-            }           
-        }
+    
+    @media screen and (max-width: $table) {
+        margin: 0 auto;
     }
 }
 
@@ -80,14 +123,14 @@ $font-family-main : 'Noto Sans TC', sans-serif;
     width: 100%;
     height: 100vh;
     background: #eee;
-    }
+}
 
 // 關於我
 #about {
     width: 100%;
     height: 100vh;
-    text-align:center;
-    
+    text-align: center;
+
     h2 {
         font-size: 200px;
         font-family: $font-family-main;
@@ -95,15 +138,15 @@ $font-family-main : 'Noto Sans TC', sans-serif;
         padding-left: 30px;
         margin-top: 50px;
     }
-    
-    p   {
+
+    p {
         padding: 30px;
         margin-bottom: 50px;
     }
 }
 
 // 標題
-.title  {
+.title {
     font-size: $font-family-main;
     padding: 50px;
     text-align: center;
@@ -136,15 +179,19 @@ $font-family-main : 'Noto Sans TC', sans-serif;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 350px);
         grid-gap: 10px 30px;
-        
+
+        @media screen and (max-width: $table) {
+            width: 100%;
+            grid-template-columns: repeat(2,1fr);
+            padding: 0 30px;
+        }
+
         .work-box-small {
-            
             img {
                 display: block;
                 width: 100%;
                 height: 300px;
                 background: #000;
-                
             }
 
             h2 {
@@ -171,13 +218,25 @@ $font-family-main : 'Noto Sans TC', sans-serif;
 
 // 頁尾
 footer {
-    background:$color-main;
+    background: $color-main;
     text-align: center;
     margin-top: 100px;
+    color:$color-white;
+    padding: 50px 0 120px 0;
     
+
     a {
         text-decoration: none;
         font-size: 30px;
+        color: white;        
+    }
 
+    .social {
+        text-align: center;
+        margin-top: 30px;
+    }
+    
+    .link {
+        margin-top: 20px;
     }
 }

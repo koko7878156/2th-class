@@ -24,51 +24,97 @@
   background: white;
 }
 
-#navigation .logo {
-  font-family: 'Noto Sans TC', sans-serif;
-  font-size: 32px;
+@media screen and (min-width: 1025px) {
+  #navigation {
+    grid-template: "logo link social";
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #navigation {
+    grid-template: "logo social menu";
+  }
+}
+
+#navigation #menu {
+  grid-area: menu;
+}
+
+@media screen and (min-width: 1025px) {
+  #navigation #menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #navigation #menu {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+.logo {
+  grid-area: logo;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 40px;
   text-decoration: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   letter-spacing: 2px;
 }
 
-#navigation .logo:hover {
+.logo:hover {
   color: #6eb3ff;
 }
 
-#navigation .link {
+.link {
   text-align: center;
+  grid-area: link;
 }
 
-#navigation .link a {
+.link a {
   text-decoration: none;
   padding: 30px 30px 30px 40px;
   -webkit-transform: 0.3s;
           transform: 0.3s;
   letter-spacing: 10px;
+  font-size: 20px;
 }
 
-#navigation .link a:hover {
+.link a:hover {
   color: #6eb3ff;
 }
 
-#navigation .social {
-  text-align: right;
+@media screen and (max-width: 1024px) {
+  .link {
+    display: none;
+  }
 }
 
-#navigation .social img {
+.social {
+  text-align: right;
+  grid-area: social;
+}
+
+.social img {
   -webkit-filter: invert(98%) sepia(2%) saturate(43%) hue-rotate(356deg) brightness(109%) contrast(87%);
           filter: invert(98%) sepia(2%) saturate(43%) hue-rotate(356deg) brightness(109%) contrast(87%);
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   width: 32px;
   margin-left: 30px;
 }
 
-#navigation .social img:hover {
+.social img:hover {
   -webkit-filter: invert(71%) sepia(74%) saturate(284%) hue-rotate(127deg) brightness(103%) contrast(95%);
           filter: invert(71%) sepia(74%) saturate(284%) hue-rotate(127deg) brightness(103%) contrast(95%);
+  width: 40px;
+}
+
+@media screen and (max-width: 1024px) {
+  .social {
+    margin: 0 auto;
+  }
 }
 
 #banner {
@@ -133,6 +179,15 @@
   grid-gap: 10px 30px;
 }
 
+@media screen and (max-width: 1024px) {
+  #works #work-box {
+    width: 100%;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    padding: 0 30px;
+  }
+}
+
 #works #work-box .work-box-small img {
   display: block;
   width: 100%;
@@ -164,10 +219,22 @@ footer {
   background: #252525;
   text-align: center;
   margin-top: 100px;
+  color: #ffffff;
+  padding: 50px 0 120px 0;
 }
 
 footer a {
   text-decoration: none;
   font-size: 30px;
+  color: white;
+}
+
+footer .social {
+  text-align: center;
+  margin-top: 30px;
+}
+
+footer .link {
+  margin-top: 20px;
 }
 /*# sourceMappingURL=style.css.map */
