@@ -22,6 +22,7 @@
   position: fixed;
   width: 100%;
   background: white;
+  z-index: 1;
 }
 
 @media screen and (min-width: 1025px) {
@@ -33,6 +34,12 @@
 @media screen and (max-width: 1024px) {
   #navigation {
     grid-template: "logo social menu";
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #navigation {
+    padding: 2px 1px;
   }
 }
 
@@ -50,6 +57,12 @@
   #navigation #menu {
     display: block;
     margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #navigation #menu {
+    width: 32px;
   }
 }
 
@@ -111,9 +124,9 @@
   width: 40px;
 }
 
-@media screen and (max-width: 1024px) {
-  .social {
-    margin: 0 auto;
+@media screen and (max-width: 767px) {
+  .social img {
+    margin-left: 0;
   }
 }
 
@@ -135,6 +148,15 @@
   letter-spacing: 30px;
   padding-left: 30px;
   margin-top: 50px;
+}
+
+@media screen and (max-width: 767px) {
+  #about h2 {
+    font-size: 50px;
+    letter-spacing: 15px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
 }
 
 #about p {
@@ -167,6 +189,12 @@
   background: #f9f9f9;
 }
 
+@media screen and (max-width: 767px) {
+  #works {
+    height: 100%;
+  }
+}
+
 #works #work-box {
   width: 1200px;
   display: -ms-grid;
@@ -185,6 +213,13 @@
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
     padding: 0 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #works #work-box {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
   }
 }
 
