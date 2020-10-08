@@ -304,6 +304,12 @@ footer .link {
   margin-top: 20px;
 }
 
+footer #copyright {
+  color: #ffffff;
+  font-size: 8px;
+  margin-top: 50px;
+}
+
 #arrow {
   position: fixed;
   right: 20px;

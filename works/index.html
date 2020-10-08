@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Money | 作品集</title>
+    <link rel="stylesheet" href="../style.css">
+
+    <!--  Slick CDN  -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+</head>
+<body id="top">
+    <!-- 導覽列 -->
+    <nav id="navigation">
+        <a href="../" class="logo">money</a>
+        <div class="link">
+            <a href="../about/">關於我</a>
+            <a href="../works/">作品集</a>
+            <a href="../contant/">連絡我</a>
+        </div>
+
+        <img src="../img/menu.png" alt="選單" id="menu">
+
+        <div class="social">
+            <a href=""><img src="../img/fb.png" alt="fb"></a>
+            <a href=""><img src="../img/git hub.png" alt="git hub"></a>
+            <a href=""><img src="../img/email.png" alt="email"></a>
+            <a href=""><img src="../img/yt.png" alt="youtube"></a>
+        </div>
+    </nav>
+    
+    <!-- 頁尾 -->
+    <footer>
+        <a href="../" class="logo">money</a>
+        <div class="social">
+            <a href=""><img src="../img/fb.png" alt="fb"></a>
+            <a href=""><img src="../img/git hub.png" alt="git hub"></a>
+            <a href=""><img src="../img/email.png" alt="email"></a>
+            <a href=""><img src="../img/yt.png" alt="youtube"></a>
+        </div>
+        <div class="link">
+            <a href="../about/">關於我</a>
+            <a href="../works/">作品集</a>
+            <a href="../contant/">連絡我</a>
+        </div>
+        <div id="copyright">
+            Copyright &copy; 2010 - 2020 <span class="logo-small">Money</span> All rights reserved
+        </div>
+    </footer>
+
+    <!-- 返回頁面 -->
+    <!-- offset="位移量" - 數量越大上方空間越大，無需位移時填寫0即可 -->
+    <img src="../img/arrow.png" alt="返回頁面" id="arrow" data-gte-target="top" data-gte-offsrt="0">
+    <!-- 前往指定元素 CDN -->
+    <script src="https://kid421.github.io/Web_JavaScript_GoToElement/goToElement.js"></script>
+    <!--  jQuery CDN  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--  Slick CDN  -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!--  js  -->
+    <script>
+        // 啟動輪播效果
+        $("#banner").slick({
+            arrows: false,
+            dots: true,
+            dotsClass: "slick-dots dots"
+        });
+    </script>
+</body>
+</html>

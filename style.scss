@@ -12,11 +12,10 @@ $font-size: 36px;
 // 文字字體
 $font-family-main: "Noto Sans TC", sans-serif;
 
-// 大小 
+// 大小
 $desktop: 1025px;
 $table: 1024px;
 $phone: 767px;
-
 
 * {
     margin: 0;
@@ -55,7 +54,7 @@ $phone: 767px;
 
         // 電腦隱藏
         @media screen and (min-width: $desktop) {
-            display: none;            
+            display: none;
         }
         // 平板顯示
         @media screen and (max-width: $table) {
@@ -66,16 +65,15 @@ $phone: 767px;
         @media screen and (max-width: $phone) {
             width: 32px;
         }
-    
     }
 }
 .logo {
     grid-area: logo;
-    
+
     font-family: "Noto Sans TC", sans-serif;
     font-size: 40px;
     text-decoration: none;
-    transition: 0.3s;   
+    transition: 0.3s;
     letter-spacing: 2px;
 
     &:hover {
@@ -86,7 +84,6 @@ $phone: 767px;
 .link {
     text-align: center;
     grid-area: link;
-    
 
     a {
         text-decoration: none;
@@ -106,7 +103,6 @@ $phone: 767px;
 }
 
 .social {
-    
     // grid-area: social;
 
     text-align: right;
@@ -118,7 +114,6 @@ $phone: 767px;
         width: 32px;
         margin-left: 30px;
 
-        
         &:hover {
             filter: invert(71%) sepia(74%) saturate(284%) hue-rotate(127deg) brightness(103%) contrast(95%);
             width: 40px;
@@ -127,10 +122,8 @@ $phone: 767px;
         // 手機
         @media screen and (max-width: $phone) {
             margin-left: 0;
-            
         }
     }
-    
 }
 
 // 橫幅
@@ -140,18 +133,18 @@ $phone: 767px;
     background: #eee;
     // 溢出:隱藏
     overflow: hidden;
-    
+
     .dots {
         bottom: 80px;
     }
 
     // 平板顯示
     @media screen and (max-width: $table) {
-       height: 100%;
+        height: 100%;
 
-       .slick-track {
-           height: 800px;
-       }
+        .slick-track {
+            height: 800px;
+        }
     }
 
     img {
@@ -160,9 +153,9 @@ $phone: 767px;
     }
     // 手機
     @media screen and (max-width: $phone) {
-      .slick-track {
-          height: 400px;
-      }
+        .slick-track {
+            height: 400px;
+        }
     }
 }
 
@@ -179,7 +172,6 @@ $phone: 767px;
         padding-left: 30px;
         margin-top: 50px;
 
-
         // 平板
         @media screen and (max-width: $table) {
             margin-top: 100px;
@@ -193,7 +185,6 @@ $phone: 767px;
             margin-bottom: 20px;
         }
     }
-    
 
     p {
         padding: 30px;
@@ -243,13 +234,13 @@ $phone: 767px;
 
         @media screen and (max-width: $table) {
             width: 100%;
-            grid-template-columns: repeat(2,1fr);
+            grid-template-columns: repeat(2, 1fr);
             padding: 0 30px;
         }
 
         // 手機
         @media screen and (max-width: $phone) {
-            grid-template-columns: repeat(1,1fr);
+            grid-template-columns: repeat(1, 1fr);
         }
 
         .work-box-small {
@@ -287,23 +278,27 @@ footer {
     background: $color-main;
     text-align: center;
     margin-top: 100px;
-    color:$color-white;
+    color: $color-white;
     padding: 50px 0 120px 0;
-    
 
     a {
         text-decoration: none;
         font-size: 30px;
-        color: white;        
+        color: white;
     }
 
     .social {
         text-align: center;
         margin-top: 30px;
     }
-    
+
     .link {
         margin-top: 20px;
+    }
+    #copyright {
+        color: $color-white;
+        font-size: 8px;
+        margin-top: 50px;
     }
 }
 
@@ -315,5 +310,5 @@ footer {
     border-radius: 50%;
     padding: 5px;
     cursor: pointer;
-    box-shadow:0 5px 2px rgba(0, 0, 0, 0.1)
+    box-shadow: 0 5px 2px rgba(0, 0, 0, 0.1);
 }
