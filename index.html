@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
+
+    <!--  Slick CDN  -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 </head>
 
-<body>
+<body id="top">
     <!-- 導覽列 -->
     <nav id="navigation">
         <a href="./index.html" class="logo">money</a>
@@ -17,7 +21,7 @@
             <a href="">作品集</a>
             <a href="">連絡我</a>
         </div>
-        
+
         <img src="./img/menu.png" alt="選單" id="menu">
 
         <div class="social">
@@ -29,6 +33,11 @@
     </nav>
     <!-- 橫幅 -->
     <section id="banner">
+        <img src="https://fakeimg.pl/1280x720/?retina=1&text=橫幅1&font=noto">
+        <img src="https://fakeimg.pl/1280x720/?retina=1&text=橫幅2&font=noto">
+        <img src="https://fakeimg.pl/1280x720/?retina=1&text=橫幅3&font=noto">
+        <img src="https://fakeimg.pl/1280x720/?retina=1&text=橫幅4&font=noto">
+        <img src="https://fakeimg.pl/1280x720/?retina=1&text=橫幅5&font=noto">
 
     </section>
     <!-- 關於我 -->
@@ -92,6 +101,24 @@
         </div>
     </footer>
 
+    <!-- 返回頁面 -->
+    <!-- offset="位移量" - 數量越大上方空間越大，無需位移時填寫0即可 -->
+    <img src="./img/arrow.png" alt="返回頁面" id="arrow" data-gte-target="top" data-gte-offsrt="0">
+    <!-- 前往指定元素 CDN -->
+    <script src="https://kid421.github.io/Web_JavaScript_GoToElement/goToElement.js"></script>
+    <!--  jQuery CDN  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--  Slick CDN  -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!--  js  -->
+    <script>
+        // 啟動輪播效果
+        $("#banner").slick({
+            arrows: false,
+            dots: true,
+            dotsClass: "slick-dots dots"
+        });
+    </script>
 </body>
 
 </html>
