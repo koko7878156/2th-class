@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Money~</title>
-    <link rel="stylesheet" href="./style.css">
+    
 
     <!--  Slick CDN  -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+    <!-- AOS CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body id="top">
@@ -42,8 +46,14 @@
     </section>
     <!-- 關於我 -->
     <section id="about">
-        <h1 class="title">關於我</h1>
-        <h2>money</h2>
+        <h1 class="title" data-aos="fade-left" data-aos-offset="600" data-aos-duration="1500" data-aos="">關於我</h1>
+        <!-- data-aos 動畫 -->
+        <!-- data-aos-offset 位移量:往上修正  -->
+        <!-- data-aos-duration = "毫秒" 為持續時間 範圍:0~3000 -->
+        <!-- data-aos-easing ="毫秒" 緩慢動作 -->
+        <!-- data-aos-mirror ="true & false" 雙向 true 允許 false 不允許 -->
+        <!-- data-aos-once ="true & false" 只撥放一次 true 一次 false 不限次數 -->
+        <h2 data-aos="flip-right" data-aos-offset="700" data-aos-duration="1500" data-aos-easing="ease-out-back" data-aos-mirror="false" data-aos-once="true">money</h2>
         <p>小小見習生，請大家多多指教</p>
         <a href="" class="button-box">關於我</a>
 
@@ -52,32 +62,33 @@
     <section id="works">
         <h1 class="title">作品集</h1>
         <div id="work-box">
-            <div class="work-box-small">
+            <!-- data-aos-delay="毫秒" 延遲執行 -->
+            <div class="work-box-small" data-aos="zoom-in" data-aos-offset="400" data-aos-duration="800">
                 <img src="" alt="">
                 <span>類別</span>
                 <h2>作品名稱</h2>
             </div>
-            <div class="work-box-small">
+            <div class="work-box-small" data-aos="zoom-in" data-aos-offset="400" data-aos-duration="800" data-aos-delay="200">
                 <img src="" alt="">
                 <span>類別</span>
                 <h2>作品名稱</h2>
             </div>
-            <div class="work-box-small">
+            <div class="work-box-small" data-aos="zoom-in" data-aos-offset="400" data-aos-duration="800" data-aos-delay="400">
                 <img src="" alt="">
                 <span>類別</span>
                 <h2>作品名稱</h2>
             </div>
-            <div class="work-box-small">
+            <div class="work-box-small" data-aos="zoom-in" data-aos-offset="400" data-aos-duration="800">
                 <img src="" alt="">
                 <span>類別</span>
                 <h2>作品名稱</h2>
             </div>
-            <div class="work-box-small">
+            <div class="work-box-small" data-aos="zoom-in" data-aos-offset="400" data-aos-duration="800" data-aos-delay="200">
                 <img src="" alt="">
                 <span>類別</span>
                 <h2>作品名稱</h2>
             </div>
-            <div class="work-box-small">
+            <div class="work-box-small" data-aos="zoom-in" data-aos-offset="400" data-aos-duration="800" data-aos-delay="400">
                 <img src="" alt="">
                 <span>類別</span>
                 <h2>作品名稱</h2>
@@ -124,6 +135,12 @@
             dotsClass: "slick-dots dots"
         });
     </script>
+     <!--AOS CDN  -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    
 </body>
 
 </html>
